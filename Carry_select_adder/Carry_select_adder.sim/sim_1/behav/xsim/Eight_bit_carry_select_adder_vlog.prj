@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Carry_select_adder.srcs/sources_1/new/2_1_mux.v" \
+"../../../../Carry_select_adder.srcs/sources_1/new/fuller_adder.v" \
+"../../../../Carry_select_adder.srcs/sources_1/new/one_bit_carry_select_adder.v" \
+"../../../../Carry_select_adder.srcs/sources_1/new/Eight_bit_carry_select_adder.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

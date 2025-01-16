@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Jan  9 11:53:16 2025
+# Process ID: 1608
+# Current directory: C:/Users/SHUBHAM_KUMAR_JHA/Desktop/HPCES Lab/Carry_select_adder/Carry_select_adder.runs/synth_1
+# Command line: vivado.exe -log one_bit_carry_select_adder.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source one_bit_carry_select_adder.tcl
+# Log file: C:/Users/SHUBHAM_KUMAR_JHA/Desktop/HPCES Lab/Carry_select_adder/Carry_select_adder.runs/synth_1/one_bit_carry_select_adder.vds
+# Journal file: C:/Users/SHUBHAM_KUMAR_JHA/Desktop/HPCES Lab/Carry_select_adder/Carry_select_adder.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source one_bit_carry_select_adder.tcl -notrace
