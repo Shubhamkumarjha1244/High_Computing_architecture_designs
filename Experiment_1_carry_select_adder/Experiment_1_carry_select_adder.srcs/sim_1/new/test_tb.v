@@ -21,26 +21,33 @@
 
 
 module test_tb();
-reg[31:0] inn1,inn2;
-reg carry_in;
-wire[31:0] sum;
+reg[7:0] inn1,inn2;
+reg select;
+wire[7:0] sum;
 wire carry_out;
+wire overflow;
 
 //TwentyThree_bit_adder dut(inn1,inn2,carry_in,sum,carry_out);
-thirty_two_carry_select_adder dut(inn1,inn2,carry_in,sum,carry_out);
+Eight_bit_carry_select_adder dut(inn1,inn2,select,sum,carry_out,overflow);
 initial
     begin
-    inn1=32'd1;
-    inn2=32'd1;
-    carry_in=1'b1;
+    inn1=8'd1;
+    inn2=8'd1;
+    select=1'b1;
+
     #10
-    inn1=23'd8388607;
-    inn2=23'd8388607;
-    carry_in=1'b1;
+    inn1=8'd255;
+    inn2=8'd255;
+    select=1'b0;
+
     #10
-    inn1=32'd4294967295;
-    inn2=32'd4294967295;
-    carry_in=1'b1;
+    inn1=8'd255;
+    inn2=8'd255;
+    select=1'b1;
+    #10
+    inn2=8'd177;
+    inn1=8'd144;
+    select=1'b1;
     #10
     $finish;
     end

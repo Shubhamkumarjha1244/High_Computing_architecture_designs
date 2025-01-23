@@ -20,14 +20,14 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module TwentyThree_bit_adder(innA,innB,carry_in,sum,carry_out);
+module TwentyThree_bit_adder(innA,innB,select,sum,carry_out);
     input[22:0] innA,innB; //input of 23 bit
-    input carry_in; //carry in
+    input select; //carry in
     output[22:0] sum;
     wire[23:0] internal_carry; //internal carry for each 1 bit block
     output carry_out;
     
-    assign internal_carry[0]=carry_in;
+    assign internal_carry[0]=select;
     assign carry_out=internal_carry[23];
     
     parameter size_of_adder=5'd23; //adder size for generate block
@@ -39,7 +39,8 @@ module TwentyThree_bit_adder(innA,innB,carry_in,sum,carry_out);
         begin : bit       //naming the instancited modules
         
             //auto instatition for 23 times
-            one_bit_carry_select_adder adder(innA[i],innB[i],internal_carry[i],sum[i],internal_carry[i+1]); //import 1 bit carry
+            assign innB[i]=innB[i]^select;
+            one_bit_carry__adder adder(innA[i],innB[i],internal_carry[i],sum[i],internal_carry[i+1]); //import 1 bit carry
         
         
         end
