@@ -11,7 +11,7 @@ Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.fuller_adder
 Compiling module xil_defaultlib.two_one_mux
 Compiling module xil_defaultlib.one_bit_carry_select_adder
-Compiling module xil_defaultlib.Eight_bit_carry_select_adder
+Compiling module xil_defaultlib.thirty_two_carry_select_adder_de...
 Compiling module xil_defaultlib.test_tb
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot test_tb_behav

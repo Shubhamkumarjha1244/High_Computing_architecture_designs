@@ -21,34 +21,48 @@
 
 
 module test_tb();
-reg[7:0] inn1,inn2;
-reg select;
-wire[7:0] sum;
-wire carry_out;
-wire overflow;
+    reg[31:0] inn1,inn2,new_inn2;
+    reg control;
+    
+    wire[31:0] sum;
+    reg[31:0] sum_correct;
+    wire[31:0] compare;
+    wire carry_out;
+    wire overflow;
+    integer i;
+    
+    
+    assign compare=sum^sum_correct;
 
-//TwentyThree_bit_adder dut(inn1,inn2,carry_in,sum,carry_out);
-Eight_bit_carry_select_adder dut(inn1,inn2,select,sum,carry_out,overflow);
-initial
-    begin
-    inn1=8'd1;
-    inn2=8'd1;
-    select=1'b1;
 
-    #10
-    inn1=8'd255;
-    inn2=8'd255;
-    select=1'b0;
+    thirty_two_carry_select_adder dut(inn1,inn2,control,sum,carry_out,overflow);
 
-    #10
-    inn1=8'd255;
-    inn2=8'd255;
-    select=1'b1;
-    #10
-    inn2=8'd177;
-    inn1=8'd144;
-    select=1'b1;
-    #10
-    $finish;
-    end
+    initial
+        begin
+        for(i=0;i<=7'd90;i=i+1)
+        begin
+            inn1=$random;
+            inn2=$random;
+            control=$random;
+            if(control)
+                new_inn2=(~inn2)+1;
+            else
+                new_inn2=inn2;
+            sum_correct=inn1+new_inn2;
+            #10;      
+        end
+          inn1=$random;
+            inn2=$random;
+            control=$random;
+            if(control)
+                new_inn2=(~inn2)+1;
+            else
+                new_inn2=inn2;
+            sum_correct=7'd100;
+            #10;  
+        end
+             
+     initial
+        #10020 $finish;
+        
 endmodule
