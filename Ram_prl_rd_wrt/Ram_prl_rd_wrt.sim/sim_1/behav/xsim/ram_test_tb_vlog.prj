@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Ram_prl_rd_wrt.srcs/sources_1/new/RAM.v" \
+"../../../../Ram_prl_rd_wrt.srcs/sim_1/new/ram_test_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
