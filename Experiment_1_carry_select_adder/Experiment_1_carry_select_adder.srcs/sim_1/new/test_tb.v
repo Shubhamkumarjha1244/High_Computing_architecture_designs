@@ -39,7 +39,7 @@ module test_tb();
 
     initial
         begin
-        for(i=0;i<=7'd90;i=i+1)
+        for(i=0;i<=7'd100;i=i+1)
         begin
             inn1=$random;
             inn2=$random;
@@ -51,13 +51,6 @@ module test_tb();
             sum_correct=inn1+new_inn2;
             #10;      
         end
-          inn1=$random;
-            inn2=$random;
-            control=$random;
-            if(control)
-                new_inn2=(~inn2)+1;
-            else
-                new_inn2=inn2;
             sum_correct=7'd100;
             #10;  
         end

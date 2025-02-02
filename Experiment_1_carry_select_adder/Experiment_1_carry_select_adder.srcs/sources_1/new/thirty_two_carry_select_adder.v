@@ -22,7 +22,7 @@
 
 module thirty_two_carry_select_adder(innA,innB,control,sum,carry_out,overflow_flag);
     parameter   number_of_adder=32;
-    input[number_of_adder-1:0] innA,innB;
+    input [number_of_adder-1:0] innA,innB;
     input control;
     output[number_of_adder-1:0] sum;
     output carry_out; 

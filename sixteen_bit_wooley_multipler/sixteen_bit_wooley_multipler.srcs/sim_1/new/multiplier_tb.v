@@ -21,16 +21,21 @@
 
 
 module multiplier_tb();
-reg [7:0] num1;
-reg [7:0] num2;
-wire [15:0] prod;
-Bough_wooley_multiplier dut(num1,num2,prod);
+reg clk=0;
+reg [3:0] num1;
+reg [3:0] num2;
+wire [7:0] prod;
+wire[2:0] check;
+Bough_wooley_multiplier dut(num1,num2,prod,check);
 
+always
+    #(0.5) clk=~clk;
+    
 initial 
     begin
-        num1=8'd2;
-        num2=8'd2;
-        #10
+        num1=4'd2;
+        num2=4'd4;
+        #1000
         $finish;
     end
 endmodule

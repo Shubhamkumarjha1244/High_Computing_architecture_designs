@@ -20,16 +20,16 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module and_block(innA,innB,out);
-    parameter size=7;
-    input[size-1:0] innA;
-    input[size-1:0] innB;
-    output [size-1:0] out;
+    parameter size=4;
+    input[size-2:0] innA;
+    input innB;
+    output [size-2:0] out;
     
     genvar i;
     
-    generate for(i=0;i<size;i=i+1)
+    generate for(i=0;i<size-1;i=i+1)
         begin:annd
-            assign out[i]=innA[i]&innB[i];
+            assign out[i]=innA[i]&innB;
         end 
      endgenerate
 endmodule
