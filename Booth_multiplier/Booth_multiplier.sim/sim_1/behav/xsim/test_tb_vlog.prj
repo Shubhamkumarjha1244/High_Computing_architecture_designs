@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Booth_multiplier.srcs/sources_1/new/adder_carry_select.v" \
+"../../../../Booth_multiplier.srcs/sim_1/new/adder_check_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

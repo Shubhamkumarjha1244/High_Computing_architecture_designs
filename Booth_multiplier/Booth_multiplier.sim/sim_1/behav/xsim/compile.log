@@ -1,0 +1,12 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/SHUBHAM_KUMAR_JHA/Desktop/HPCES Lab/Booth_multiplier/Booth_multiplier.srcs/sources_1/new/adder_carry_select.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module full_adder
+INFO: [VRFC 10-311] analyzing module one_bit_carry_select_adder
+INFO: [VRFC 10-311] analyzing module two_one_mux
+INFO: [VRFC 10-311] analyzing module n_bit_carry_select_adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/SHUBHAM_KUMAR_JHA/Desktop/HPCES Lab/Booth_multiplier/Booth_multiplier.srcs/sources_1/new/booth_multiplier_functional.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module booth_multiplier_n_bit_functional
+WARNING: [VRFC 10-3380] identifier 'ppr' is used before its declaration [C:/Users/SHUBHAM_KUMAR_JHA/Desktop/HPCES Lab/Booth_multiplier/Booth_multiplier.srcs/sources_1/new/booth_multiplier_functional.v:28]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/SHUBHAM_KUMAR_JHA/Desktop/HPCES Lab/Booth_multiplier/Booth_multiplier.srcs/sources_1/new/n_bit_two_one_mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module n_bit_two_one_mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/SHUBHAM_KUMAR_JHA/Desktop/HPCES Lab/Booth_multiplier/Booth_multiplier.srcs/sim_1/new/booth_multiplier_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module booth_multiplier_test
