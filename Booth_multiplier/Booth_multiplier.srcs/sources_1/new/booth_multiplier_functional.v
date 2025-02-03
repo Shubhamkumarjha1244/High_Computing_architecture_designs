@@ -31,14 +31,14 @@ module booth_multiplier_n_bit_functional(clk,multiplier,multiplicand,product);
     reg[size-1:0] multiplier_reg=0;
     reg lsb=0;
     
-    wire[size-1:0] adder_substractor_out;
-    wire[size-1:0] ppr_wire;
+    wire [size-1:0] adder_substractor_out;
+    wire [size-1:0] ppr_wire;
     wire mux_select;
     
     
     
     n_bit_carry_select_adder adder_substractor(ppr,multiplicand,multiplier_reg[0],adder_substractor_out);
-    assign mux_select=multiplier_reg[0]^lsb;
+    xor xor1(mux_select,lsb,multiplier_reg[0]);
     n_bit_two_one_mux mux(ppr,adder_substractor_out,mux_select,ppr_wire);
      
      
@@ -51,7 +51,7 @@ module booth_multiplier_n_bit_functional(clk,multiplier,multiplicand,product);
         if(flag==1)
                 begin
                 ppr=ppr_wire;
-                {ppr,multiplier_reg,lsb}={ppr,multiplier_reg,lsb}>>>1;
+                {ppr,multiplier_reg,lsb}={ppr[size-1],ppr,multiplier_reg};
                 end 
         else
             flag=1;

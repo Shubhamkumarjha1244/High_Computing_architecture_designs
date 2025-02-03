@@ -24,8 +24,10 @@ module booth_multiplier_test();
     reg clk=0;
     parameter size=32;
     reg[size-1:0] multiplier,multiplicand;
-    reg[7:0]counter=0;
+    reg[6:0]counter=0;
     wire[(2*size)-1:0] product;
+  
+    
     
     booth_multiplier_n_bit_functional dut(clk,multiplier,multiplicand,product);
     
@@ -36,12 +38,12 @@ module booth_multiplier_test();
             counter=counter+1;
         else
             $finish;
-    
  
     initial
         begin
-        multiplier=2;
-        multiplicand=4;
+        multiplier=$random;
+        multiplicand=$random;
         end
+        
 
 endmodule
