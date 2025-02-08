@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="register_bank_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="register_bank_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="1000001fs"></ZoomEndTime>
+      <Cursor1Time time="1000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="404"></NameColumnWidth>
+      <ValueColumnWidth column_width="184"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="10" />
+   <wvobject fp_name="/register_bank_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/register_bank_tb/read" type="logic">
+      <obj_property name="ElementShortName">read</obj_property>
+      <obj_property name="ObjectShortName">read</obj_property>
+   </wvobject>
+   <wvobject fp_name="/register_bank_tb/write" type="logic">
+      <obj_property name="ElementShortName">write</obj_property>
+      <obj_property name="ObjectShortName">write</obj_property>
+   </wvobject>
+   <wvobject fp_name="/register_bank_tb/dr_addr" type="array">
+      <obj_property name="ElementShortName">dr_addr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">dr_addr[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/register_bank_tb/sr1_addr" type="array">
+      <obj_property name="ElementShortName">sr1_addr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">sr1_addr[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/register_bank_tb/sr2_addr" type="array">
+      <obj_property name="ElementShortName">sr2_addr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">sr2_addr[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/register_bank_tb/dr_data_wr" type="array">
+      <obj_property name="ElementShortName">dr_data_wr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dr_data_wr[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/register_bank_tb/sr1_data_rd" type="array">
+      <obj_property name="ElementShortName">sr1_data_rd[31:0]</obj_property>
+      <obj_property name="ObjectShortName">sr1_data_rd[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/register_bank_tb/sr2_data_rd" type="array">
+      <obj_property name="ElementShortName">sr2_data_rd[31:0]</obj_property>
+      <obj_property name="ObjectShortName">sr2_data_rd[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/register_bank_tb/i" type="array">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+   </wvobject>
+</wave_config>

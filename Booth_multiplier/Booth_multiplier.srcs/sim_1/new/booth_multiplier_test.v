@@ -21,29 +21,39 @@
 
 
 module booth_multiplier_test();
+    //input field
     reg clk=0;
-    parameter size=32;
+    reg rst;
+    parameter size=4;
     reg[size-1:0] multiplier,multiplicand;
-    reg[6:0]counter=0;
+    reg[7:0]counter=0;
+    //output field
     wire[(2*size)-1:0] product;
+
   
     
     
-    booth_multiplier_n_bit_functional dut(clk,multiplier,multiplicand,product);
+    booth_multiplier_n_bit_functional dut(clk,rst,multiplier,multiplicand,product); // dut initilization
     
     always
-        #5 clk=~clk;
+        #5 clk=~clk; // clock initialization
     always @(posedge clk)
         if(counter!=size+1)
-            counter=counter+1;
+            counter=counter+1; //to count number of cycle, n cycle is target
         else
-            $finish;
- 
-    initial
+            $finish ;
+    initial 
+            begin
+            multiplier=-3;
+            multiplicand=-2;
+            end
+      initial // rst signal control
         begin
-        multiplier=$random;
-        multiplicand=$random;
+        rst=1;
+        #7  
+        rst=0;
         end
         
-
+        
+        
 endmodule

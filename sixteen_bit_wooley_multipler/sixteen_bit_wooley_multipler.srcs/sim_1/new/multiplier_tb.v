@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 20.01.2025 08:51:52
+// Create Date: 03.02.2025 01:17:17
 // Design Name: 
-// Module Name: multiplier_tb
+// Module Name: booth_multiplier_test
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,22 +20,30 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module multiplier_tb();
-reg clk=0;
-reg [3:0] num1;
-reg [3:0] num2;
-wire [7:0] prod;
-wire[2:0] check;
-Bough_wooley_multiplier dut(num1,num2,prod,check);
-
-always
-    #(0.5) clk=~clk;
+module booth_multiplier_test();
+    reg clk=0;
+    parameter size=32;
+    reg[size-1:0] multiplier,multiplicand;
+    reg[6:0]counter=0;
+    wire[(2*size)-1:0] product;
+  
     
-initial 
-    begin
-        num1=4'd2;
-        num2=4'd4;
-        #1000
-        $finish;
-    end
+    
+    booth_multiplier_n_bit_functional dut(clk,multiplier,multiplicand,product);
+    
+    always
+        #5 clk=~clk;
+    always @(posedge clk)
+        if(counter!=size+1)
+            counter=counter+1;
+        else
+            $finish;
+ 
+    initial
+        begin
+        multiplier=$random;
+        multiplicand=$random;
+        end
+        
+
 endmodule

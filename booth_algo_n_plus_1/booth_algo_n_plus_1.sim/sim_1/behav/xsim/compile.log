@@ -1,0 +1,10 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/SHUBHAM_KUMAR_JHA/Desktop/HPCES Lab/booth_algo_n_plus_1/booth_algo_n_plus_1.srcs/sources_1/new/booth_algo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module full_adder
+INFO: [VRFC 10-311] analyzing module two_one_mux
+INFO: [VRFC 10-311] analyzing module one_bit_carry_select_adder
+INFO: [VRFC 10-311] analyzing module n_bit_carry_select_adder
+INFO: [VRFC 10-311] analyzing module n_bit_two_one_mux
+INFO: [VRFC 10-311] analyzing module booth_multiplier_n_bit_functional
+WARNING: [VRFC 10-3380] identifier 'ppr' is used before its declaration [C:/Users/SHUBHAM_KUMAR_JHA/Desktop/HPCES Lab/booth_algo_n_plus_1/booth_algo_n_plus_1.srcs/sources_1/new/booth_algo.v:108]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/SHUBHAM_KUMAR_JHA/Desktop/HPCES Lab/booth_algo_n_plus_1/booth_algo_n_plus_1.srcs/sim_1/new/test_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module booth_multiplier_test

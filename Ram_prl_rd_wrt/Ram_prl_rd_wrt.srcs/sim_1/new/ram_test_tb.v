@@ -21,18 +21,20 @@
 
 
 module ram_test_tb();
-    reg control_signal;
     reg[31:0]data_wr;
+    reg read,write;
     reg[4:0] addr_wr,addr_rd;
     wire[31:0] data_rd;
-    
     integer i;
-    RAM dut(control_signal,data_wr,addr_wr,data_rd,addr_rd);
+    
+    
+    RAM dut(read,write,data_wr,addr_wr,data_rd,addr_rd);
     
     initial 
         for(i=0;i<90;i=i+1)
             begin
-            control_signal=$random;
+            read=$random;
+            write=$random;
             data_wr=$random;
             addr_wr=$random;
             addr_rd=$random;
