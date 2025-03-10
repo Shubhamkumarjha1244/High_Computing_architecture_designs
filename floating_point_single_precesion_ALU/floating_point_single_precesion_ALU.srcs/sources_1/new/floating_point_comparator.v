@@ -26,12 +26,13 @@ module floating_point_comparator(float1,float2,greater,smaller,equal);
     output greater,smaller,equal; //output greater=1 when float1>float2
                                   //smaller=1 when float1<float2
                                   //equal=1 when float1=float2
-    wire sign1,sign2; //register to store sign data
-    wire[7:0] exponent1,exponent2; //register to store exponent data
-    wire[22:0] mentissa1,mentissa2; //register to store mentissa data
-    
-    wire greater_both_neg,greater_both_not_neg;   
-                               
+    wire sign1,sign2; //sign data wire
+    wire[7:0] exponent1,exponent2; //exponent data wire
+    wire[22:0] mentissa1,mentissa2; //mentissa data wire
+
+    wire greater_both_neg,greater_both_not_neg;   //internal wire
+        
+        //assignment in each wire from input                      
         assign sign1=float1[31];
         assign sign2=float2[31];
         assign exponent1=float1[30:23];
@@ -39,7 +40,10 @@ module floating_point_comparator(float1,float2,greater,smaller,equal);
         assign mentissa1=float1[22:0];
         assign mentissa2=float2[22:0];
         
-        
+  
+ 
+ //sending into different  logic cases (both negative & all other)
+        assign greater=(sign1&sign2)?greater_both_neg:greater_both_not_neg;      
         
  //logic  when both are not negative      
         //logic to check Float1>Float2
@@ -49,18 +53,11 @@ module floating_point_comparator(float1,float2,greater,smaller,equal);
         assign greater_both_neg=(exponent1<exponent2)?1'b1:(exponent1>exponent2)?1'b0:((mentissa1<mentissa2)?1'b1:1'b0);
         
 
- 
- //merge both logic
-       assign greater=(sign1&sign2)?greater_both_neg:greater_both_not_neg;
         
          
 //logic to check Float2==Float1
        assign equal=(sign1==sign2) & (exponent1==exponent2) & (mentissa2==mentissa1);
 //logic to check Float1<float2
         assign smaller=~(greater|equal);
-        
-
-        
-    
-    
+            
 endmodule

@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Comparing_booth_bough_wooley_multiplier.srcs/sources_1/new/Booth_multiplier.v" \
+"../../../../Comparing_booth_bough_wooley_multiplier.srcs/sources_1/new/Wough_boogley.v" \
+"../../../../Comparing_booth_bough_wooley_multiplier.srcs/sim_1/new/test_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

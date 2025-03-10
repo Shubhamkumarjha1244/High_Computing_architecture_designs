@@ -22,9 +22,16 @@
 
 module floating_point_comparator_tb();
     reg[31:0] float1,float2;
-    wire greater,smaller,equal;
+    wire [31:0] result;
+//    wire greater,smaller,equal;
     
-    floating_point_comparator dut(float1,float2,greater,smaller,equal); //dut initialization
+//    floating_point_comparator dut(float1,float2,greater,smaller,equal); //dut initialization
+    
+    floating_point_multiplier dut(float1,float2,result);
+    
+    
+    
+    
     
     initial
         begin

@@ -1,0 +1,7 @@
+Running: xsim.dir/woogh_boogly_behav/xsimk.exe -simmode gui -wdb woogh_boogly_behav.wdb -simrunnum 0 -socket 57009
+Design successfully loaded
+Design Loading Memory Usage: 8336 KB (Peak: 8336 KB)
+Design Loading CPU Usage: 77 ms
+Simulation completed
+Simulation Memory Usage: 9104 KB (Peak: 9104 KB)
+Simulation CPU Usage: 108 ms

@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Webtalk v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Fri Mar  7 23:08:04 2025
+# Process ID: 9140
+# Current directory: C:/Users/SHUBHAM_KUMAR_JHA/Desktop/HPCES Lab/floating_point_single_precesion_ALU/floating_point_single_precesion_ALU.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/SHUBHAM_KUMAR_JHA/Desktop/HPCES Lab/floating_point_single_precesion_ALU/floating_point_single_precesion_ALU.sim/sim_1/behav/xsim/xsim.dir/floating_point_comparator_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/SHUBHAM_KUMAR_JHA/Desktop/HPCES Lab/floating_point_single_precesion_ALU/floating_point_single_precesion_ALU.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: C:/Users/SHUBHAM_KUMAR_JHA/Desktop/HPCES Lab/floating_point_single_precesion_ALU/floating_point_single_precesion_ALU.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/SHUBHAM_KUMAR_JHA/Desktop/HPCES -notrace
+couldn't read file "C:/Users/SHUBHAM_KUMAR_JHA/Desktop/HPCES": permission denied
+INFO: [Common 17-206] Exiting Webtalk at Fri Mar  7 23:08:04 2025...
