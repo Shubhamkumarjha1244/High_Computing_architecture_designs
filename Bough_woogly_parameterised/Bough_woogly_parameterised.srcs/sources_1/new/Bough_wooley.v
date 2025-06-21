@@ -19,9 +19,10 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
+
+
 //last Adder block (tested)
-module last_fa(sum_in,carry_in,x,y,out);
-    parameter size=32;
+module last_fa #(parameter size=32) (sum_in,carry_in,x,y,out);
     input[size-3:0] sum_in;
     input[size-2:0] carry_in;
     input x,y;
@@ -60,8 +61,7 @@ module fa(innA,innB,carry_in,sum,carry_out);
 endmodule
  
 //block tested
-module adder_block(vertical_inn,horizontal_inn,carry_in,sum,carry_out);
-    parameter size=32;
+module adder_block#(parameter size=32)(vertical_inn,horizontal_inn,carry_in,sum,carry_out);
     input[size-2:0] vertical_inn;
     input[size-2:0] horizontal_inn;
     input [size-2:0] carry_in;
@@ -82,8 +82,7 @@ endmodule
 //endmodule
 
 //block_tested
-module nand_block(arr,inn,out);
-    parameter size=32;
+module nand_block #(parameter size=32)(arr,inn,out);
     input[size-2:0] arr;
     input inn;
     output[size-2:0] out;
@@ -96,8 +95,7 @@ module nand_block(arr,inn,out);
 endmodule
 
 //block_tested
-module and_block(arr,inn,out);
-    parameter size=32;
+module and_block #(parameter size=32)(arr,inn,out);
     input[size-2:0] arr;
     input inn;
     output [size-2:0] out;
@@ -109,8 +107,7 @@ module and_block(arr,inn,out);
     endgenerate       
 endmodule
     
-module woogh_boogly(input1,input2,product);
-    parameter size=32;
+module woogh_boogly #(parameter size=32)(input1,input2,product);
     input[size-1:0] input1,input2;
     output[(2*size)-1:0] product;
     wire[size-1:0] first_vertical_inn;
@@ -132,7 +129,7 @@ module woogh_boogly(input1,input2,product);
     
     //first row (tested)
     and_block and_v_1(input1[size-2:0],input2[0],first_vertical_inn[size-2:0]);
-    assign first_vertical_inn[size-1]=~(input1[size-1]&input2[0]);
+    assign  first_vertical_inn[size-1]=~(input1[size-1]&input2[0]);
     
     and_block and_h_1(input1[size-2:0],input2[1],first_horizontal_inn);
     
@@ -154,12 +151,9 @@ module woogh_boogly(input1,input2,product);
    //FA_nand_block
             nand_block nand1(input1[size-2:0],input2[size-1],nand_horizontal_inn);
             adder_block add_nand({~(input1[size-1]&input2[size-2]),sum[size-3][size-2:1]},nand_horizontal_inn,carry[size-3],sum[size-2],carry[size-2]);
-            assign product[size-1]=sum[size-2][0];
+            assign product [size-1]=sum[size-2][0];
                
     //last adder block
     last_fa last(sum[size-2][size-2:1],carry[size-2],input1[size-1],input2[size-1],product[(2*size)-1:size]);
     
-    
-    
-
 endmodule

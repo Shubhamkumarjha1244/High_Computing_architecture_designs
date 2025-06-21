@@ -2,10 +2,10 @@
 # Webtalk v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Sun Feb  9 09:44:52 2025
-# Process ID: 15992
+# Start of session at: Sun Feb  9 09:53:18 2025
+# Process ID: 3348
 # Current directory: C:/Users/SHUBHAM_KUMAR_JHA/Desktop/HPCES Lab/Bough_woogly_parameterised/Bough_woogly_parameterised.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source C:/Users/SHUBHAM_KUMAR_JHA/Desktop/HPCES Lab/Bough_woogly_parameterised/Bough_woogly_parameterised.sim/sim_1/behav/xsim/xsim.dir/woogh_boogly_behav/webtalk/xsim_webtalk.tcl -notrace
+# Command line: wbtcv.exe -mode batch -source C:/Users/SHUBHAM_KUMAR_JHA/Desktop/HPCES Lab/Bough_woogly_parameterised/Bough_woogly_parameterised.sim/sim_1/behav/xsim/xsim.dir/horizontal_full_adder_block_test_tb_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: C:/Users/SHUBHAM_KUMAR_JHA/Desktop/HPCES Lab/Bough_woogly_parameterised/Bough_woogly_parameterised.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: C:/Users/SHUBHAM_KUMAR_JHA/Desktop/HPCES Lab/Bough_woogly_parameterised/Bough_woogly_parameterised.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------

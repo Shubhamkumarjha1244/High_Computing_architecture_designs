@@ -1,7 +1,4 @@
-
-module bough_wooley_tb();
-    parameter size=32;
-    
+module bough_wooley_tb #(parameter size=32)();
     reg[size-1:0] input1,input2;
     wire [(2*size)-1:0] product;
     woogh_boogly dut(input1,input2,product);
